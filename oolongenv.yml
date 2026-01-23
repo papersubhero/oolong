@@ -1,0 +1,35 @@
+name: mlcommon
+channels:
+  - defaults
+dependencies:
+  - jupyter
+  - scikit-learn
+  - python=3.11
+  - pandas
+  - cuda
+  - entrypoints
+  - future
+  - openpyxl
+  - google-auth-oauthlib
+  - sacremoses
+  - nltk==3.7
+  - datasets
+  - cython
+  - toml
+  - inflect
+  - importlib-resources
+  - matplotlib
+  - numpy
+  - pillow
+  - libwebp
+  - pyarrow
+  - scipy
+  - huggingface_hub
+  - filelock
+  - transformers
+  - pyyaml
+  - tokenizers=0.21.2
+  - wandb
+variables:
+  TENOR_API_KEY: AIzaSyDh_QVyVJd0H7gwDecjxDUPNBCUJKDY6H8
+prefix: /mnt/spring_scratch_pure/boya/miniconda3/envs/mlcommon
