@@ -55,8 +55,23 @@ Models are in the corresponding subfolders:
 
 ## Useful Scripts
 
-We provide the following scripts that were used in our evaluation so that future researchers can adapt to other projects. 
-- test script
-- train script
-- embedding computation 
+We provide the scripts in the subfolder `scripts/`.
 
+#### Testing Model
+
+The script `test_model.py` contains code to reproduce the experiment results using our pretrained models. 
+There are several configurations (marked with `TOCONFIG`) for customization:
+- `WEBP_FROM_TGS_DIR`: since CLIP-like models cannot process TGS files, we must convert the sticker files from TGS to WEBP files before computing the embedding. Our pretrained model and embedding dataset have contained precomputed results, so for reproducing purpose, there is no need of double converstion. 
+- `class ContextClassifier`: we provide two classifier class definitions, one for 2FC, the other for LSTM, choose the corresponding classifier for the running test and comment out the other one
+- `MSG/MEDIA_EMB_DB`: add the embedding DB path
+- `test_dir_list`: put test data dir
+- `model_list`: put the models to test, each model will be tested on ALL test dir in the previous list
+- `media`: put the media universe file here for reference
+- `BASE/PATH`: base path prepended before the test dir or model names
+- `context_length`: context window size, consistent with the one of tested models, should be 3, 6, or 9
+
+After configuration, run the test script to get precision, recall, f1 score. 
+Sometimes the test script can take time to run, we recommend using `nohup` to run tests in the background and redircting terminal output into a file for later checking:
+```bash
+nohup python test.py > MODEL_NAME_TEST_DIR_NAME_TIMESTAMP.out 2>&1 &
+```
