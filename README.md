@@ -17,9 +17,10 @@ We extended Discop code to support Qwen model in `qwen_discop/Discop`.
 
 For efficient evaluation, we precompute the embeddings of the conversation data and store the embeddings in datasets. 
 
-- 
-- `en_discop_msg_emb.db` (1.8G) contains embeddings for all `msg` strings in Discop EN conversation dataset
-- `en_discop_media_emb.db` (433M) contains embeddings for all `media` files in Discop EN conversation dataset 
+- `en_msg_emb.db` contains CLIP-computed embeddings for all `msg` strings in dictionary EN conversation dataset and Qwen-Discop EN conversation dataset
+- `en_media_emb.db` contains CLIP-computed embeddings for all `media` files in dictionary EN conversation dataset and Qwen-Discop EN conversation dataset
+- `en_discop_msg_emb.db` (1.8G) contains CLIP-computed embeddings for all `msg` strings in Discop EN conversation dataset
+- `en_discop_media_emb.db` (433M) contains CLIP-computed embeddings for all `media` files in Discop EN conversation dataset 
 - `zh_all_msg_emb.db` (723M) contains Chinese-CLIP-computed embeddings for all `msg` strings in Chinese (ZH) conversation dataset
 - `zh_all_media_emb.db` (10M) contains Chinese-CLIP-computed embeddings for all `media` files in ZH conversation dataset
 
