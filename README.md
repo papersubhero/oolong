@@ -11,7 +11,10 @@ conda activate oolongenv
 
 #### Discop Adaptation
 
-We extended Discop code to support Qwen model in `qwen_discop/Discop`. 
+We extended Discop code to support Qwen model, decompress the file in `adapted_discop/` to a folder named `Discop/`:
+```
+tar -xzf adapted_discop/adapted_discop.tar.gz -C Discop/
+``` 
 
 #### Conversation Data Embedding
 
