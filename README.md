@@ -21,7 +21,7 @@ For efficient evaluation, we precompute the embeddings of the conversation data 
 - `en_discop_msg_emb.db` (1.8G) contains embeddings for all `msg` strings in Discop EN conversation dataset
 - `en_discop_media_emb.db` (433M) contains embeddings for all `media` files in Discop EN conversation dataset 
 - `zh_all_msg_emb.db` (723M) contains Chinese-CLIP-computed embeddings for all `msg` strings in Chinese (ZH) conversation dataset
-- `zh_all_media_emb.db` (10M) contains CHinese-CLIP-computed embeddings for all `media` files in ZH conversation dataset
+- `zh_all_media_emb.db` (10M) contains Chinese-CLIP-computed embeddings for all `media` files in ZH conversation dataset
 
 ## Ready-to-Test Models
 
