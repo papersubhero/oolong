@@ -36,14 +36,22 @@ age -d -i PATH/TO/KEY/FILE/key.txt -o emb_db/DBNAME.db emb_db/DBNAME.db.age
 
 To reproduce the experiment results in our evaluation section, we provide the following pre-trained models.
 
-#### EN Dictionary Models
-- 
+All the models follow the same naming convention:
+- `fc`: trained with two fully connected NN
+- `en/zh`: trained with EN or ZH data
+- `len10`: all conversation data used in the training or testing of this model contain at least with 10 messages
+- `dict`: trained using dictionary instantiation
+- `discop`: trained using default Transfo model in Discop
+- `qwen_discop`: trained using adapted Qwen model in Discop
+- `probstrX11431`: stego rate set as 1 for `X=10`, 0.5 for `X=5`, 0.2 for `X=2`, 0.1 for `X=1`, 0.05 for `X=05`
+- `ctxK`: context window size as 3 for `K=3`, 6 for `K=6`, 9 for `K=9`
+- `epN`: with early stop mechanism for optimal model, the training stoped at epoch N
+- `bsL`: batch size set to L
 
-#### EN Discop Models
-
-#### ZH Dictionary Models
-
-#### ZH Discop Models
+Models are in the corresponding subfolders:
+- `fc_en_dict_models`
+- `fc_en_qwen_models`
+- `fc_en_tranfo_models`
 
 ## Useful Scripts
 
