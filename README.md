@@ -37,7 +37,7 @@ age -d -i PATH/TO/KEY/FILE/key.txt -o emb_db/DBNAME.db emb_db/DBNAME.db.age
 To reproduce the experiment results in our evaluation section, we provide the following pre-trained models.
 
 All the models follow the same naming convention:
-- `fc`: trained with two fully connected NN
+- `fc/lstm`: trained with two fully connected NN (`fc`) or LSTM (`lstm`)
 - `en/zh`: trained with EN or ZH data
 - `len10`: all conversation data used in the training or testing of this model contain at least with 10 messages
 - `dict`: trained using dictionary instantiation
