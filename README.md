@@ -29,9 +29,20 @@ For efficient evaluation, we precompute the embeddings of the conversation data 
 
 For access control of the data embeddings, we encrypted all the databases using `age`, and share the key only for review purpose. 
 To decrypt each database, fill in the correct full path of key file, the name of database, and run: 
-```
+
+```bash
 age -d -i PATH/TO/KEY/FILE/key.txt -o emb_db/DBNAME.db emb_db/DBNAME.db.age
 ```
+## Test Data
+
+We provide the (encrypted) test data in `test_data` for review purpose as well as the corresponding media files in `all_media`, and we plan to release the training data as well upon approval from the conference ethics review board. 
+The test data are encrypted the same way as the embeddings (and hence, can be decrypted in the same way as the embeddings):
+- `en_dict`: test data in EN for dictionary instantiation
+- `en_transfo_discop`: test data in EN for Transfo Discop instantiation
+- `en_qwen_discop`: test data in EN for Qwen Discop instantiation
+- `zh_dict`: test data in ZH for dictionary instantiation
+- `zh_discop`: test data in ZH for both Transfo and Qwen Discop instantiation
+
 ## Ready-to-Test Models
 
 To reproduce the experiment results in our evaluation section, we provide the following pre-trained models.
