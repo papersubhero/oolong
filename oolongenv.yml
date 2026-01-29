@@ -32,4 +32,4 @@ dependencies:
   - wandb
 variables:
   TENOR_API_KEY: AIzaSyDh_QVyVJd0H7gwDecjxDUPNBCUJKDY6H8
-prefix: /mnt/spring_scratch_pure/boya/miniconda3/envs/mlcommon
+prefix: /miniconda3/envs/mlcommon
