@@ -9,14 +9,14 @@ conda env create -f oolongenv.yml
 conda activate oolongenv
 ```
 
-#### Discop Adaptation
+## Discop Adaptation
 
 We extended Discop code to support Qwen model, decompress the file in `adapted_discop/` to a folder named `Discop/`:
 ```
 tar -xzf adapted_discop/adapted_discop.tar.gz -C Discop/
 ``` 
 
-#### Conversation Data Embedding
+## Conversation Data Embedding
 
 For efficient evaluation, we precompute the embeddings of the conversation data and store the embeddings in datasets. 
 
@@ -27,8 +27,15 @@ For efficient evaluation, we precompute the embeddings of the conversation data 
 - `zh_all_msg_emb.db` (723M) contains Chinese-CLIP-computed embeddings for all `msg` strings in Chinese (ZH) conversation dataset
 - `zh_all_media_emb.db` (10M) contains Chinese-CLIP-computed embeddings for all `media` files in ZH conversation dataset
 
-For access control of the data embeddings, we encrypted all the databases using `age`, and share the key only for review purpose. 
-To decrypt each database, fill in the correct full path of key file, the name of database, and run: 
+### Data Encryption As Precaution
+For access control of the conversation data (and their embeddings), we encrypted all the database-related files using `age`, and share the key only for review purpose in the Open Science field on the HotCRP website. 
+To decrypt each encrypted file with extension `.age`, first install `age` through command line:
+
+```bash
+conda install -c conda-forge age
+```
+
+After successful installation, fill in the correct full path of key file, the name of database, and run: 
 
 ```bash
 age -d -i PATH/TO/KEY/FILE/key.txt -o emb_db/DBNAME.db emb_db/DBNAME.db.age
@@ -68,7 +75,7 @@ Models are in the corresponding subfolders:
 
 We provide the scripts in the subfolder `scripts/`.
 
-#### Testing Model
+### Testing Model
 
 The script `test_model.py` contains code to reproduce the experiment results using our pretrained models. 
 There are several configurations (marked with `TOCONFIG`) for customization:
