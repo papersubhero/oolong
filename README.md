@@ -146,4 +146,6 @@ Models are in the corresponding subfolders:
 - `fc_en_qwen_models`
 - `fc_en_tranfo_models`
 
+Experiments for more models see `\more-model`. 
+
 
